@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #feed{
+            position: relative;
+            left: 200px;
+            top: 150px;
+            background-color: gray;
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
+        }
+      h1{
+        text-align: center;
+        font-size: 78px;
+        text-transform: uppercase;
+        position: relative;
+        top: 150px;
+        color: teal;
+      }
+      body{
+       background-image: url("photo-1575220360526-be964710f279.jpeg");
+       background-size:cover;
+    
+
+       
+       background-repeat: no-repeat;
+      }
+      #submit{
+        position: absolute;
+        top: 550px;
+        left: 270px;
+        width: 100px;
+        height: 50px;
+        font-weight: bold;
+      }
+      #container{
+        
+        width: 160px;
+        height: 300px;
+   
+        position: absolute;
+        left:1200px;
+      }
+     
+
+
+#Clear{ position: absolute;
+        top: 550px;
+        left: 400px;
+        width: 100px;
+        height: 50px;
+        font-weight: bold;
+
+}
+#cover{
+                position: absolute;;
+                left: 50px;
+                top: 40px;
+                width:100px;
+                height: 40px;
+                font-size: 15px;
+                font-weight: bolder;
+                
+            
+                border-radius: 15px;
+               
+               box-shadow: 5px 3px 3px 3px black;
+               padding-left: 5px;
+             
+                
+            }
+            #coverlink{
+    color: black;
+                text-decoration: none;
+ }
+
+
+
+           
+
+        
+
+    </style>
+</head>
+<body>
+  <button id="cover"><a href="index.html" id="coverlink">Cover</a></button>
+    <div id="container"></div>
+     <h1> feedback</h1>
+     <form>
+   <textarea name="feedback" id="feed" cols="130" rows="10" placeholder="Enter Your Comments.."></textarea>
+    <button id="submit">Submit</button>
+    <button id="Clear" onclick="clear()">Clear</button>
+
+
+
+
+</form>
+<script>
+function clear(){
+  document.getElementById("feed").innerHTML="";
+}
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

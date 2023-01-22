@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <style>
+            #container{
+                display: flex;
+                flex-direction:row;
+              
+                width: 800px;
+                height: 600px;
+                position: relative;
+                top:60px;
+                left: 50%;
+                transform: translateX(-50%);
+                box-shadow: 0px 8px 15px black;
+                color: silver;
+               
+                
+            }
+            #info{flex: 2;
+               
+               
+                width:300x;
+             
+                padding-left: 30px;
+            
+             
+        
+              
+
+            }
+            #order{flex: 3;
+               
+                width: 200px;
+              
+                padding-left: 30px;
+            
+                
+            
+             
+               
+                
+            }
+            body{
+                background-image: url("photo-1575220360526-be964710f279.jpeg");
+                 background-size: cover;
+       
+                 background-repeat: no-repeat;
+                
+            }
+            #cover{
+                position: absolute;;
+                left: 50px;
+                top: 40px;
+                width:100px;
+                height: 40px;
+                font-size: 15px;
+                font-weight: bolder;
+                
+            
+                border-radius: 15px;
+               
+               box-shadow: 5px 3px 3px 3px black;
+               padding-left: 5px;
+             
+                
+            }
+           
+ #coverlink{
+    color: black;
+                text-decoration: none;
+ }
+
+
+#demo{
+    height: 130px;
+    width: 250px;
+    overflow: scroll;
+    background-color:black;
+    padding-left: 10px;
+    color: white;
+}
+ label{
+    font-weight: bolder;
+ }
+ button{
+    font-weight: bolder;
+ }
+       
+     
+
+
+        </style>
+    </head>
+    <body>
+     <button id="cover"><a href="index.html" id="coverlink">Cover</a></button>
+
+     
+     <div id="container">
+
+        <div id="info">
+        <form>
+        <h1>Payment Details</h1>
+        <label>First Name</label><br><br>
+        <input type="text" id="fname"><br><br>
+        <label>Last Name</label><br><br>
+        <input type="text" id="lname"><br><br>
+        <label>Address</label><br><br>
+        <textarea></textarea><br><br>
+        <label>Mobile No</label><br><br>
+        <input type="number" id="tel"><br><br>
+        <label>Email Address</label><br><br>
+        <input type="email" id="mail"><br><br>
+       
+         <button>Submit</button>
+
+    </form>
+        </div>
+
+        <div id="order">
+            
+            <form><h1>YOUR CART</h1>
+                <p id="demo"></p>
+                <h1>Place Your Order</h1>
+                <label>Product</label><br><br>
+                <input type="text" id="product"><br><br>
+                <label>Quantity</label><br><br>
+                <input type="number" id="qty"><br><br>
+               
+                <button onclick="place()">Place  Order</button>
+                
+
+
+            </form>
+            <button onclick="add()">Add to cart</button>
+            <button onclick="view()">View cart</button><br><br>
+            
+            
+           
+        </div>
+
+     </div>
+
+   
+
+<script>
+  
+    let cart=[];
+    let cartprice=[];
+    
+
+for(let a=0;a<50;a++)
+{ 
+    let count=0+a;
+    function add(){
+
+    
+        let item=document.getElementById("product").value;
+    let quantity= document.getElementById("qty").value;
+    cart[count]=item;
+    cartprice[count]=quantity;
+   
+   
+}
+
+
+function view()
+{document.getElementById("demo").insertAdjacentHTML("beforeend","<p>"+cart[count]+"     "+cartprice[count]+"</p>");
+
+  
+
+}
+
+}
+function  place(){
+    
+    let item=document.getElementById("product").value;
+    let quantity= document.getElementById("qty").value;
+    if(item!=""  && quantity!="")
+    {
+    alert("  THAMK YOU !!!your order has been placed \n Make your payment once the order is deivered");
+    }
+    else{
+        alert("select a product to purchase");
+    }
+}
+
+   </script>
+
+    </body>
+</html>
